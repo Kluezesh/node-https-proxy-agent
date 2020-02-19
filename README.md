@@ -74,7 +74,7 @@ console.log('attempting to connect to WebSocket %j', endpoint);
 
 // create an instance of the `HttpsProxyAgent` class with the proxy server information
 var options = url.parse(proxy);
-
+options.timeout = 20000; // optional, add building tunnel timeout
 var agent = new HttpsProxyAgent(options);
 
 // finally, initiate the WebSocket connection
@@ -107,6 +107,7 @@ The `options` argument may either be a string URI of the proxy server to use, or
   * `port` - Number - Proxy port to connect to. Required.
   * `protocol` - String - If `https:`, then use TLS to connect to the proxy.
   * `headers` - Object - Additional HTTP headers to be sent on the HTTP CONNECT method.
+  * `timeout` - milliseconds - building a new tunnel timeout, not the requesting timeout.
   * Any other options given are passed to the `net.connect()`/`tls.connect()` functions.
 
 
