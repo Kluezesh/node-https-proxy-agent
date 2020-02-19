@@ -1,7 +1,9 @@
 https-proxy-agent
 ================
+# fixed the socket connection leak problem within [https-proxy-agent@4.0.0](https://github.com/TooTallNate/node-https-proxy-agent)
+
 ### An HTTP(s) proxy `http.Agent` implementation for HTTPS
-[![Build Status](https://github.com/TooTallNate/node-https-proxy-agent/workflows/Node%20CI/badge.svg)](https://github.com/TooTallNate/node-https-proxy-agent/actions?workflow=Node+CI)
+[![Build Status](https://github.com/Kluezesh/node-https-proxy-agent/workflows/Node%20CI/badge.svg)](https://github.com/Kluezesh/node-https-proxy-agent/actions?workflow=Node+CI)
 
 This module provides an `http.Agent` implementation that connects to a specified
 HTTP or HTTPS proxy server, and can be used with the built-in `https` module.
